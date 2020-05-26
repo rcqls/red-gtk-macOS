@@ -7,6 +7,7 @@ N.B.: this project is an updated version of `docker-red-gtk` only dedicated to m
 Please, before installing, check that these tools are not yet installed
 
 ```{bash}
+# git is supposed to be installed
 brew cask install docker # updates are then automatically managed 
 brew cask install xquartz
 brew install socat
@@ -20,9 +21,10 @@ brew install socat
 if [ -f "<path-docker-red-init-sh>/docker-red-init.sh" ];then . <path-docker-red-init-sh>/docker-red-init.sh; fi
 ```
 1. socat service: to connect DISPLAY inside the container to XQuartz:
-	* start socat: `docker-red service start`
-	* stop socat: `docker-red service stop`
-1. Build docker image(s): `docker-red  build `
+	* Start the service:  `docker-red service start`
+	* Just wait few seconds until you should see a bash window that you can close only if you prefer to open another (less basic) terminal of your choice.
+	* This step additionnally creates `~/RedGTK` folder with subfolder `red` (containing the `red/red:GTK branch` from the source repository of [`red`](https://github.com/red/red.git)) and `bin` where you can install executables inside the container.
+1. Build docker image: `docker-red  build `
 1. Run the container: `docker-red`
 1. Inside the container: 
 	* `/home/user/macHome` corresponds to the Home directory to your macOS.
