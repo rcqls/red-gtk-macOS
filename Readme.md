@@ -1,6 +1,6 @@
 # red/gtk for macOS using docker or vagrant
 
-N.B.: this project is a light udated version of `docker-red-gtk` dedicated to macOS/Catalina user willing to use `red/red:GTK` since 32bits binary is no more considered with this version of macOS.  
+N.B.: this project is an updated version of `docker-red-gtk` only dedicated to macOS/Catalina user willing to use `red/red:GTK` since 32bits binary is no more considered with this version of macOS.  
 
 ## Quick start
 
