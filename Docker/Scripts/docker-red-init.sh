@@ -271,7 +271,7 @@ function docker-red {
 					;;
 				esac
 				mkdir -p $HOME/RedGTK/bin
-				if ! [ -d $HOME/RedGTK/red]; then
+				if ! [ -d $HOME/RedGTK/red ]; then
 					curdir=$pwd
 					cd $HOME/RedGTK
 					git clone -b GTK https://github.com/red/red.git 
