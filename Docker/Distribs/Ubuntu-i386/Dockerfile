@@ -1,4 +1,4 @@
-FROM i386/ubuntu:disco
+FROM i386/ubuntu
 
 MAINTAINER "Cqls Team"
 

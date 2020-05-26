@@ -1,0 +1,40 @@
+#!/bin/bash
+
+redroot="/home/user/red/red"
+new_redroot="$HOME/RedGTK/red"
+if [ -d $new_redroot ]; then  redroot=$new_redroot; fi
+
+redargs="-r"
+redmv="false"
+
+cmd=$1
+
+if [ "$cmd" = "--root" ]; then
+	shift
+	redroot=$1
+	shift
+	cmd=$1
+fi
+
+if [ "$cmd" = "--args" ]; then
+	shift
+	redargs=$1
+	shift
+	cmd=$1
+fi
+
+if [ "$cmd" = "--mv" ]; then
+	redmv="true"
+	shift
+	cmd=$1
+fi
+
+redfile="$cmd"
+echo "Rebol[] do/args %${redroot}/red.r \"${redargs} %${redfile}\"" | rebol +q -s
+if [ "$redmv" = "true" ]; then 
+	redbin="/home/user/macHome/RedGTK/bin"
+	basename=$(basename ${redfile})
+	mkdir -p $redbin
+	redfilebin="${basename%.*}"
+	if [ -f $redfilebin ]; then mv $redfilebin $redbin/ ; fi
+fi

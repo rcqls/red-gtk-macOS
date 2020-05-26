@@ -4,7 +4,7 @@
 function docker-red {
 	compile_args=""		# --args for red-compile
 	compile_root=""		# --root for red-compile
-	distrib="ubuntu-disco-i386"	# linux distrib of container
+	distrib="ubuntu-i386"	# linux distrib of container
 	container=""		# container name (default is rcqls/red-gtk-$distrib)
 	ifs=""				# to specifiy specific network interface(s)
 	debug="false"		# to echo output
