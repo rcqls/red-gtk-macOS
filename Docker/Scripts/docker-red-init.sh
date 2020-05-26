@@ -206,7 +206,7 @@ function docker-red {
 	
 	build)
 
-		if [ "$build_folder" = "" ]; then build_folder="https://github.com/rcqls/docker-red-gtk.git#:Distribs"; fi
+		if [ "$build_folder" = "" ]; then build_folder="https://github.com/rcqls/red-gtk-macOS.git#:Docker/Distribs"; fi
 
 		case $distrib in
 		ubuntu)
