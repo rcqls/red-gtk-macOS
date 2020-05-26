@@ -1,10 +1,8 @@
 # red/gtk for macOS using docker or vagrant
 
-N.B.: this project is an updated version of `docker-red-gtk` only dedicated to macOS/Catalina user willing to use `red/red:GTK` since 32bits binary is no more considered with this version of macOS.  
+N.B.: this project is an updated version of `docker-red-gtk` only dedicated to macOS/Catalina user willing to use `red/red:GTK` since 32bits binary is no more considered with this version of macOS.
 
-## Quick start
-
-### Requirement 
+## Requirement 
 
 Please, before installing, check that these tools are not yet installed
 
@@ -14,7 +12,7 @@ brew cask install xquartz
 brew install socat
 ```
 
-### Main use
+## Quick start
 
 1. Download [docker-red-init.sh](https://raw.githubusercontent.com/rcqls/red-gtk-macOS/master/Docker/Scripts/docker-red-init.sh)
 1. Add it to `.bash_profile` (or similar)
@@ -29,4 +27,4 @@ if [ -f "<path-docker-red-init-sh>/docker-red-init.sh" ];then . <path-docker-red
 1. Inside the container: 
 	* `/home/user/macHome` corresponds to the Home directory to your macOS.
 	* `red` binary (the latest) is installed inside the container.
-	* TODO: To update the `red` binary
+	* TODO: Add command to update the `red` binary to `red-latest`
