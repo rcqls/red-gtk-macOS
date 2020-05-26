@@ -23,7 +23,7 @@ if [ -f "<path-docker-red-init-sh>/docker-red-init.sh" ];then . <path-docker-red
 1. socat service: to connect DISPLAY inside the container to XQuartz:
 	* Start the service:  `docker-red service start`
 	* Just wait few seconds until you should see a bash window that you can close only if you prefer to open another (less basic) terminal of your choice.
-	* This step additionnally creates `~/RedGTK` folder with subfolder `red` (containing the `red/red:GTK branch` from the source repository of [`red`](https://github.com/red/red.git)) and `bin` where you can install executables inside the container.
+	* This step additionnally creates `~/RedGTK` folder with subfolder `red` (containing the `red/red:GTK branch` from the source repository of [`red`](https://github.com/red/red.git)) and subfolder `bin` where you can install executables inside the container.
 1. Build docker image: `docker-red  build `
 1. Run the container: `docker-red`
 1. Inside the container: 
