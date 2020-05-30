@@ -288,6 +288,14 @@ function docker-red {
 				;;
 		esac
 		;;
+	binary|RedGTK)
+		curdir=$pwd
+		cd $HOME/RedGTK/bin
+		wget http://static.red-lang.org/dl/branch/GTK/linux/red-latest
+		mv red-latest red
+		chmod u+x red
+		cd $curdir
+		;;
 	esac
 
 }
