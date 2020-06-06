@@ -1,7 +1,7 @@
 #!/bin/bash
 
 redroot="/home/user/red/red"
-new_redroot="$HOME/RedGTK/red"
+new_redroot="$HOME/macHome/RedGTK/red"
 if [ -d $new_redroot ]; then  redroot=$new_redroot; fi
 
 redargs="-r"
