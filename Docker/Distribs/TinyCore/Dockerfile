@@ -6,6 +6,8 @@ RUN tce-load -w -i mirrors.tcz
 
 RUN  tce-load -wic bash Xvesa gtk3 curl openssl-1.1.1 dbus
 
+USER root
+
 RUN adduser -D user
 
 USER user
