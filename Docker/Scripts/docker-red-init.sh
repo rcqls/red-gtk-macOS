@@ -69,6 +69,8 @@ function docker-red {
 					al|alp|al86|alp86) #already i386
 						distrib="alpine"
 						;;
+					tc|tc86|tiny86)
+						distrib="tinycore"
 				esac
 				shift
 				;;
@@ -251,6 +253,10 @@ function docker-red {
 		alpine)
 			build_folder="${build_folder}/Alpine"
 			distrib="alpine"
+			;;
+		tinycore)
+			build_folder="${build_folder}/TinyCore"
+			distrib="tinycore"
 			;;
 		esac
 		
