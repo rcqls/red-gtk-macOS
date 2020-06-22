@@ -15,19 +15,19 @@ brew install socat
 
 ## Quick start
 
-1. Download [docker-red-init.sh](https://raw.githubusercontent.com/rcqls/red-gtk-macOS/master/Docker/Scripts/docker-red-init.sh)
+1. Download [red-docker-init.sh](https://raw.githubusercontent.com/rcqls/red-gtk-macOS/master/Docker/Scripts/red-docker-init.sh)
 1. Add it to `.bash_profile` (or similar)
 ```
-if [ -f "<path-docker-red-init-sh>/docker-red-init.sh" ];then . <path-docker-red-init-sh>/docker-red-init.sh; fi
+if [ -f "<path-red-docker-init-sh>/red-docker-init.sh" ];then . <path-red-docker-init-sh>/red-docker-init.sh; fi
 ```
 1. socat service: to connect DISPLAY inside the container to XQuartz:
-	* Start the service:  `docker-red service start`
+	* Start the service:  `red-docker service start`
 	* Just wait few seconds until you should see a bash window that you can close only if you prefer to open another (less basic) terminal of your choice.
 	* This step additionnally creates `~/RedGTK` folder with subfolder `red` (containing the `red/red:GTK branch` from the source repository of [`red`](https://github.com/red/red.git)) and subfolder `bin` where you can install executables inside the container.
-1. Build docker image: `docker-red  build `
-1. Run the container: `docker-red`
+1. Build docker image: `red-docker  build `
+1. Run the container: `red-docker`
 1. Inside the container: 
 	* `/home/user/macHome` corresponds to the Home directory to your macOS.
 	* On your macOS, everything in `~/RedGTK/bin` is in the `$PATH` inside the container.
 	* `red` binary (the latest) is installed inside the container, so just play inside the container as you usually do in a terminal on your macOS.
-	* `docker-red binary` download the latest `red` binary.
+	* `red-docker binary` download the latest `red` binary.
