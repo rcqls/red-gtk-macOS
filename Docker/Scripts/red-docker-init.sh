@@ -1,7 +1,7 @@
 ## TODO: mode build start stop without run --rm
 ## more adequate for running script without starting each time the container
 
-function docker-red {
+function red-docker {
 	compile_args=""		# --args for red-compile
 	compile_root=""		# --root for red-compile
 	distrib="ubuntu-i386"	# linux distrib of container
@@ -306,8 +306,8 @@ function docker-red {
 
 }
 
-docker-red-help() {
+red-docker-help() {
 	cat <<- EOF
-	usage: docker-red [--root <>] [--dist ubuntu|arch|centos] [-c] [-r] [-u] [exec|run|repl|compile]
+	usage: red-docker [--root <>] [--dist ubuntu|arch|centos] [-c] [-r] [-u] [exec|run|repl|compile]
 	EOF
 }
